@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="470.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hib.view.controller.PlaceOrderViewController">
+    <stylesheets>
+        <URL value="@/lk/ijse/hib/view/style/placeorder.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="470.0">
+         <children>
+            <JFXTextField fx:id="txtOrderId" labelFloat="true" layoutX="15.0" layoutY="76.0" promptText="Order Id" />
+            <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="15.0" layoutY="216.0" promptText="Unit Price" />
+            <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="195.0" layoutY="127.0" promptText="Customer Name" />
+            <JFXTextField fx:id="txtItemName" labelFloat="true" layoutX="195.0" layoutY="171.0" promptText="Item Name" />
+            <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="17.0" layoutY="262.0" promptText="quantity" />
+            <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="196.0" layoutY="216.0" promptText="Quantity On Hand" />
+            <JFXButton fx:id="btnAdd" layoutX="74.0" layoutY="320.0" onAction="#btnAddMouseClicked" text="ADD" />
+            <JFXButton fx:id="btnDelete" layoutX="371.0" layoutY="315.0" onAction="#btnDeleteMouseClicked" text="DELETE" />
+            <TableView fx:id="tblPlaceOrder" layoutX="17.0" layoutY="367.0" prefHeight="129.0" prefWidth="439.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Item Id" />
+                <TableColumn prefWidth="89.0" text="Item Name" />
+                  <TableColumn prefWidth="104.0" text="Unit Price" />
+                  <TableColumn prefWidth="85.0" text="Quantity" />
+                  <TableColumn prefWidth="85.0" text="Price" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnSubmit" layoutX="313.0" layoutY="532.0" onAction="#btnSbmitMouseClicked" prefHeight="50.0" prefWidth="135.0" text="Submit" />
+            <JFXTextField fx:id="txtNetPrice" layoutX="11.0" layoutY="533.0" prefHeight="56.0" prefWidth="257.0" promptText="Net Price:" text="Net Price:">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXTextField>
+            <ComboBox fx:id="cmbCustomerId" layoutX="13.0" layoutY="129.0" prefWidth="150.0" promptText="Customer Id" />
+            <ComboBox fx:id="cmbItemId" layoutX="15.0" layoutY="172.0" prefWidth="150.0" promptText="Item Id" />
+            <DatePicker fx:id="txtDate" layoutX="321.0" layoutY="65.0" prefHeight="19.0" prefWidth="135.0" promptText="Choose a date" />
+         </children></AnchorPane>
+      <Label layoutX="125.0" layoutY="8.0" prefHeight="67.0" prefWidth="333.0" text="Place Order Form">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
